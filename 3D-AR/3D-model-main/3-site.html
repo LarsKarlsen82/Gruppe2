@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try</title>
+
+    <script src="/app.js" defer></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded arjs>
+      <!-- define a camera which will move according to the marker position -->
+
+ <a-marker>
+        <a-text value="Gruppe 2" position="-2 0.1 -3.5" rotation="-90 0 0"width= "4" height="4"color="blue"></a-text>
+        <a-text value="'Super Ahmad Emad Younis'" position="-2 0.1 -3" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+        <a-text value="'Anders Skov Elgaard'" position="-1.3 0.1 -2.5" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+        <a-text value="' Mega Inthushan Krishnanithy" position="-2 0.1 -2" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+        <a-text value="'Lars Karlsen'" position="-0.7 0.1 -1.5" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+
+        <a-image src="/assest/Ahm.png" position="-2.5 0.1 -3 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+        <a-image src="/assest/And.png" position=" 1 0.1 -2.5 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+        <a-image src="/assest/Int.png" position="-2.5 0.1 -2 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+        <a-image src="/assest/Lars.png" position=" 1 0.1 -1.5 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+
+
+        <a-plane position="0 0 -2" rotation="-90 0 0" width="5" height="4" color="black"></a-plane>
+
+        <a-text value="Gruppe 2 er supergruppen af webudviklere :) " position="-2 0.1 -0.5" rotation="-90 0 0"width= "4" height="4"color="blue"></a-text>
+
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

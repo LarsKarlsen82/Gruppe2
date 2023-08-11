@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- At nægte skalering gør at siden virker på android mobiltelefoner -->
+    <title>try</title>
+
+    <script src="/app.js" defer></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;">
+      <!-- define a camera which will move according to the marker position -->
+
+      <a-marker type="barcode" value="1">
+        <a-asset>
+          <a-asset id="cityModel" src="assest/Vintage cartoon character 2.glb"></a-asset>
+          <a-asset id="panda" src="assest/Panda - low poly.glb"></a-asset>
+          <a-asset id="croc" src="/assest/crocodile_sculpture_-_optimized_scan.glb"></a-asset>
+          <a-asset id="benz" src="/assest/mercedes-benz_w140_v12_amg_s-class.glb"></a-asset>
+          <a-asset id="crash" src="/assest/crash_nstctrnf.glb"></a-asset>
+
+        </a-asset>
+
+        <a-entity
+          position="-2 2 -1"
+          rotation="0 0 0"
+          gltf-model="#cityModel"
+        ></a-entity>
+        
+        <a-entity
+          position="-2 -0.5 1"
+          rotation="-10 0 0"
+          gltf-model="#panda"
+        ></a-entity>
+
+        <a-entity
+          position="2 2 -1"
+          rotation="0 0 0"
+          gltf-model="#croc"
+        >
+        </a-entity>
+
+        <a-entity
+          position="2 -0.5 1"
+          rotation="-10 0 0"
+          gltf-model="#benz"
+          scale="0.5 0.5 0.5"
+        >
+        </a-entity>
+      </a-marker>
+
+      <a-marker type="barcode" value="2">
+        <a-entity position="0 -5 2">
+          <a-text value="Gruppe 2" position="-2 0.1 -3.5" rotation="-90 0 0"width= "4" height="4"color="blue"></a-text>
+        <a-text value="'Super Ahmad Emad Younis'" position="-2 0.1 -3" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+        <a-text value="'Anders Skov Elgaard'" position="-1.3 0.1 -2.5" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+        <a-text value="' Mega Inthushan Krishnanithy" position="-2 0.1 -2" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+        <a-text value="'Lars Karlsen'" position="-0.7 0.1 -1.5" rotation="-90 0 0"width= "4" height="4"color="red"></a-text>
+
+        <a-image src="/assest/Ahm.png" position="-2.5 0.1 -3 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+        <a-image src="/assest/And.png" position=" 1 0.1 -2.5 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+        <a-image src="/assest/Int.png" position="-2.5 0.1 -2 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+        <a-image src="/assest/Lars.png" position=" 1 0.1 -1.5 0" rotation="-90 0 0" width="1" height="0.9"></a-image>
+
+
+        <a-plane position="0 0 -2" rotation="-90 0 0" width="5" height="4" color="black"></a-plane>
+
+        <a-text value="Gruppe 2 er supergruppen af webudviklere :) " position="-2 0.1 -0.5" rotation="-90 0 0"width= "4" height="4"color="white"></a-text>
+        </a-entity>
+
+      </a-marker>
+
+      <a-marker preset="hiro">
+        <a-entity 
+        position="0 0 0"
+        rotation="-90 0 0" 
+        gltf-model="#crash" 
+        scale="0.1 0.1 0.1"
+        ></a-entity>
+        <a-text value="Danmarks fremtid :) " position="-1 -1 0" rotation="-90 0 0"width= "6" height="6"color="#E03616"></a-text>
+      </a-marker>
+
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
